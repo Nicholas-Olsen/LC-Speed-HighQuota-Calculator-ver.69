@@ -59,10 +59,10 @@
         table:nth-of-type(2) th {
             background-color: #66ff66; 
             color: #333333; 
+}
 table:nth-of-type(2) {
     width: 100%; /* 가로폭을 100%로 설정 */
     table-layout: fixed; /* 고정 너비 레이아웃 */
-}
 }
 table:nth-of-type(2) th:first-child, 
 table:nth-of-type(2) td:first-child {
