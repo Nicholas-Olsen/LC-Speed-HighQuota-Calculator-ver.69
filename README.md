@@ -33,6 +33,7 @@
         table {
             width: 100%;
             border-collapse: separate;
+             table-layout: fixed;
             margin-top: 10px;
             border-radius: 10px;
             overflow: hidden;
