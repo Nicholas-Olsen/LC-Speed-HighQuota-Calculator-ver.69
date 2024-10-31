@@ -1,4 +1,4 @@
-### Made my Nichol
+### Made my Nichol 
 <html>
 <html lang="ko">
 <head>
@@ -33,19 +33,19 @@ fieldset {
         }
 table {
     width: 100%;
-    border-collapse: collapse; /* border-collapse를 collapse로 설정 */
+    border-collapse: separate; /* border-collapse를 separate로 설정 */
     margin-top: 10px;
-    border-radius: 10px;
-    overflow: hidden;
-    table-layout: fixed;
+    border-radius: 10px; /* 모서리 둥글게 처리 */
+    overflow: hidden; /* 둥글게 처리된 모서리 내부의 내용 잘림 방지 */
 }
 
 th, td {
     padding: 5px;
     text-align: center;
-    border: 1px solid #33ff33; !important /* 윤곽선 색상 및 두께 */
-    background-color: #333333;
+    border: 1px solid #33ff33; /* 윤곽선 색상 및 두께 */
+    background-color: #333333; /* 배경색 설정 */
 }
+
         th:first-child, td:first-child {
             width: 210px;
         }
@@ -94,7 +94,7 @@ table:nth-of-type(2) td:last-child {
     width: 40%;
 }
 
-table:nth-of-type(3) th:first-child, 
+table:nth-of-type(3) th:first-child, 		/* 3번째 테이블 */
 table:nth-of-type(3) td:first-child {
     width: 50%;
 }
@@ -103,6 +103,7 @@ table:nth-of-type(3) th:nth-child(2),
 table:nth-of-type(3) td:nth-child(2) {
     width: 50%;
 }
+
         label {
             font-size: 20px;
         }
@@ -311,9 +312,9 @@ function calculate() {
 
     // 각 항목에 대한 비용 계산
     for (let i = 1; i <= 10; i++) {
-        const checkbox = document.querySelector(`input[name="item${i}"]`);
-        const quantity = parseInt(document.getElementById(`number${i}`).value) || 0;
-        const salePrice = parseInt(document.getElementById(`salePrice${i}`).value) || 0;
+        const checkbox = document.querySelector(input[name="item${i}"]);
+        const quantity = parseInt(document.getElementById(number${i}).value) || 0;
+        const salePrice = parseInt(document.getElementById(salePrice${i}).value) || 0;
 
         if (checkbox && checkbox.checked) { // checkbox가 정의된 경우에만 체크
             playerUtilityPurchase += salePrice * quantity; // 플레이어 유틸리티 구매 합산
@@ -331,7 +332,7 @@ function calculate() {
 
     // 선박 유틸리티 구매 계산
     for (let j = 2; j <= 3; j++) {
-        const shipCheckbox = document.querySelector(`input[name="ship${j}"]`);
+        const shipCheckbox = document.querySelector(input[name="ship${j}"]);
         if (shipCheckbox && shipCheckbox.checked) { // checkbox가 정의된 경우에만 체크
             shipUtilityPurchase += parseInt(shipCheckbox.value); // 선박 유틸리티 구매 합산
         }
