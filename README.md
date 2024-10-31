@@ -6,19 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>High Quota Sell Calculator by Nichol</title>
     <style>
-        body {
-            background-color: #333333;
-            color: #99ff99;
-            font-family: Sans-serif;
-            font-weight: bold;
-        }
-        fieldset {
-            border: 5px solid #33ff33;
-            padding: 5px;
-            max-width: 650px;
-            margin: 30px auto;
-            border-radius: 10px;
-        }
+body {
+    background-color: #333333;
+    color: #99ff99;
+    font-family: Sans-serif;
+    font-weight: bold;
+}
+
+fieldset {
+    border: 5px solid #33ff33;
+    padding: 5px;
+    max-width: 650px;
+    margin: 30px auto;
+    border-radius: 10px;
+}
         h1 {
             text-align: center;
             font-size: 2em;
@@ -30,19 +31,21 @@
             text-align: center;
             margin-top: 20px;
         }
-        table {
-            width: 100%;
-            border-collapse: separate;
-             table-layout: fixed;
-            margin-top: 10px;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-        th, td {
-            padding: 5px; /* 줄인 부분 */
-            text-align: center;
-            border: 1px solid #33ff33;
-        }
+table {
+    width: 100%;
+    border-collapse: separate; /* border-collapse를 separate로 설정 */
+    margin-top: 10px;
+    border-radius: 10px; /* 모서리 둥글게 처리 */
+    overflow: hidden; /* 둥글게 처리된 모서리 내부의 내용 잘림 방지 */
+}
+
+th, td {
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #33ff33; /* 윤곽선 색상 및 두께 */
+    background-color: #333333; /* 배경색 설정 */
+}
+
         th:first-child, td:first-child {
             width: 210px;
         }
@@ -52,14 +55,19 @@
         th:nth-child(4), td:nth-child(4) {
             width: 25%;
         }
-        th {
-            font-size: 1.3em;
-            background-color: #66ff66;
-            color: #333333;
-        }
-        table:nth-of-type(2) th {
-            background-color: #66ff66; 
-            color: #333333; 
+th {
+    font-size: 1.3em;
+    background-color: #66ff66; /* 첫 번째 테이블의 헤더 배경색 */
+    color: #333333;
+}
+/* 두 번째 테이블에 대한 스타일 */
+table:nth-of-type(2) th {
+    background-color: #66ff66; /* 첫 번째 행 배경색 설정 */
+    color: #333333;
+}
+
+table:nth-of-type(2) td {
+    background-color: #333333; /* 나머지 셀의 배경색 설정 */
 }
 table:nth-of-type(2) {
     width: 100%; /* 가로폭을 100%로 설정 */
@@ -90,7 +98,7 @@ table:nth-of-type(2) td:last-child {
             color: #333333;
             width: 65%;
             font-weight: bold;
-            height: 20px;
+            height: 25px;
         }
         input[type="number"]#RequiredQuota {
             width: 25%; 
@@ -161,67 +169,67 @@ table:nth-of-type(2) td:last-child {
                 <td>철제 삽</td>
                 <td><input type="checkbox" name="item1" value="30"></td>
                 <td><input type="number" min="0" id="number1"></td>
-                <td><input type="number" step="1" id="salePrice1" value="30"></td>
+                <td><input type="number" step="3" id="salePrice1" value="30" max="30"></td>
             </tr>
             <tr>
                 <td>자물쇠 따개</td>
                 <td><input type="checkbox" name="item2" value="20"></td>
                 <td><input type="number" min="0" id="number2"></td>
-                <td><input type="number" step="1" id="salePrice2" value="20"></td>
+                <td><input type="number" step="2" id="salePrice2" value="20" max="20"></td>
             </tr>
             <tr>
                 <td>제초제</td>
                 <td><input type="checkbox" name="item3" value="25"></td>
                 <td><input type="number" min="0" id="number3"></td>
-                <td><input type="number" step="1" id="salePrice3" value="25"></td>
+                <td><input type="number" step="2.5" id="salePrice3" value="25" max="25"></td>
             </tr>
             <tr>
                 <td>제트팩</td>
                 <td><input type="checkbox" name="item4" value="900"></td>
                 <td><input type="number" min="0" id="number4"></td>
-                <td><input type="number" step="10.0" id="salePrice4" value="900"></td>
+                <td><input type="number" step="90" id="salePrice4" value="900" max="900"></td>
             </tr>
             <tr>
                 <td>페인트 스프레이</td>
                 <td><input type="checkbox" name="item5" value="50"></td>
                 <td><input type="number" min="0" id="number5"></td>
-                <td><input type="number" step="1" id="salePrice5" value="50"></td>
+                <td><input type="number" step="5" id="salePrice5" value="50" max="50"></td>
             </tr>
             <tr>
                 <td>벨트 배낭</td>
                 <td><input type="checkbox" name="item6" value="45"></td>
                 <td><input type="number" min="0" id="number6"></td>
-                <td><input type="number" step="1" id="salePrice6" value="45"></td>
+                <td><input type="number" step="4.5" id="salePrice6" value="45" max="45"></td>
             </tr>
             <tr>
                 <td>TZP-흡입제</td>
                 <td><input type="checkbox" name="item7" value="80"></td>
                 <td><input type="number" min="0" id="number7"></td>
-                <td><input type="number" step="1" id="salePrice7"  value="80"></td>
+                <td><input type="number" step="8" id="salePrice7"  value="80" max="80"></td>
             </tr>
             <tr>
                 <td>프로 손전등</td>
                 <td><input type="checkbox" name="item8" value="25"></td>
                 <td><input type="number" min="0" id="number8"></td>
-                <td><input type="number" step="1" id="salePrice8" value="25"></td>
+                <td><input type="number" step="2.5" id="salePrice8" value="25" max="25"></td>
             </tr>
             <tr>
                 <td>기절 수류탄</td>
                 <td><input type="checkbox" name="item9" value="30"></td>
                 <td><input type="number" min="0" id="number9"></td>
-                <td><input type="number" step="1" id="salePrice9" value="30"></td>
+                <td><input type="number" step="3" id="salePrice9" value="30" max="30"></td>
             </tr>
             <tr>
                 <td>연장형 사다리</td>
                 <td><input type="checkbox" name="item10" value="60"></td>
                 <td><input type="number" min="0" id="number10"></td>
-                <td><input type="number" step="1" id="salePrice10" value="60"></td>
+                <td><input type="number" step="6" id="salePrice10" value="60" max="60"></td>
             </tr>
             <tr>
                 <td>무전기</td>
                 <td><input type="checkbox" name="item11" value="12"></td>
                 <td><input type="number" min="0" id="number11"></td>
-                <td><input type="number" step="1.0" id="salePrice11" value="12"></td>
+                <td><input type="number" step="0.2" id="salePrice11" value="12" max="12"></td>
             </tr>
         </tbody>
     </table>
