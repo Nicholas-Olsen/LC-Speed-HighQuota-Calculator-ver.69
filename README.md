@@ -73,15 +73,21 @@ table:nth-of-type(2) {
     width: 100%; /* 가로폭을 100%로 설정 */
     table-layout: fixed; /* 고정 너비 레이아웃 */
 }
+table:nth-of-type(2) {
+    width: 100%; /* 가로폭을 100%로 설정 */
+    table-layout: auto; /* 자동 너비 조정 */
+}
+
 table:nth-of-type(2) th:first-child, 
 table:nth-of-type(2) td:first-child {
-    width: 220px; /* 두 번째 테이블의 첫 번째 열 너비 증가 */
+    width: 50%; /* 첫 번째 열의 너비 증가 */
 }
 
 table:nth-of-type(2) th:last-child, 
 table:nth-of-type(2) td:last-child {
-    width: 100px; /* 두 번째 테이블의 두 번째 열 너비 감소 */
-        }
+    width: 50%; /* 두 번째 열의 너비 증가 */
+}
+
         label {
             font-size: 18px;
         }
