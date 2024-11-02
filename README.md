@@ -32,7 +32,7 @@
         }
         h1 {
             text-align: center;
-            font-size: 1.5em;
+            font-size: 1.2em;
             font-weight: bold;
             margin: 10px 0;
         }
