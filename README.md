@@ -66,11 +66,13 @@ h1 {
             color: #333333; /* 헤더 폰트 색 */
         }
 
-        /* 첫 번째 행을 제외한 모든 셀의 배경색 설정 */
-        tbody td {
-            background-color: #333333;
-        }
+tbody tr {
+    background-color: #333333; /* tbody의 모든 행 배경색 */
+}
 
+tbody tr:hover {
+    background-color: #444444; /* 선택적으로 마우스를 올렸을 때 색상 변경 */
+}
         /* 반응형 레이아웃 */
         @media (max-width: 600px) {
             h1 {
