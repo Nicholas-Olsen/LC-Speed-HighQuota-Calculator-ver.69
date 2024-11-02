@@ -13,13 +13,13 @@
             box-sizing: border-box;
         }
 
-        body {
-            background-color: #333333; /* 배경 색 */
-            color: #99ff99; /* 기본 폰트 색 */
-            font-family: Sans-serif;
-            font-weight: bold;
-            font-size: 60%; /* 전체 폰트 크기 축소 */
-        }
+body {
+    background-color: #333333; /* 배경 색 */
+    color: #99ff99; /* 기본 폰트 색 */
+    font-family: Sans-serif;
+    font-weight: bold;
+    font-size: 60%; /* 전체 폰트 크기 60%로 설정 */
+}
 
         /* 반응형 스타일링 추가 */
         fieldset {
@@ -32,12 +32,12 @@
             box-sizing: border-box;
         }
 
-        h1 {
-            text-align: center;
-            font-size: 1.0em;
-            font-weight: bold;
-            margin: 10px 0;
-        }
+h1 {
+    text-align: center;
+    font-size: 1.5em; /* h1의 크기를 부모 요소의 1.5배로 설정 */
+    font-weight: bold;
+    margin: 10px 0;
+}
 
         .result {
             font-size: 1.5em;
