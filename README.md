@@ -7,14 +7,7 @@
     <title>High Quota Sell Calculator by Nichol</title>
     <style>
 <style>
-    body {
-        background-color: #333333;
-        color: #99ff99;
-        font-family: Sans-serif;
-        font-weight: bold;
-        margin: 0;
-        padding: 0;
-    }
+
        /* 반응형 스타일링 추가 */
 fieldset {
         border: 5px solid #33ff33;
