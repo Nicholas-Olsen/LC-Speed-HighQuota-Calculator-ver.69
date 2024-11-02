@@ -39,14 +39,15 @@
             transform-origin: top left; /* 축소 기준점 */
         }
 
-        fieldset {
-            border: 5px solid #33ff33;
-            padding: 5px;
-            max-width: 650px;
-            margin: 30px auto;
-            border-radius: 10px;
-        }
-
+        /* 반응형 스타일링 추가 */
+fieldset {
+    border: 5px solid #33ff33;
+    padding: 5px;
+    max-width: 100%; /* 모바일에서 화면 너비를 꽉 채우도록 설정 */
+    width: 100%;
+    margin: 30px auto;
+    box-sizing: border-box; /* padding과 border를 포함하여 크기 조정 */
+}
         h1 {
             text-align: center;
             font-size: 2em;
@@ -60,13 +61,14 @@
             margin-top: 20px;
         }
 
-        table {
-            width: 100%;
-            border-collapse: separate;
-            margin-top: 10px;
-            border-radius: 10px;
-            overflow: hidden;
-        }
+      table {
+    width: 100%; /* 테이블도 화면 너비를 꽉 채우도록 설정 */
+    border-collapse: separate;
+    margin-top: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
 
         th, td {
             padding: 5px;
