@@ -18,9 +18,10 @@
             color: #99ff99; /* 기본 폰트 색 */
             font-family: Sans-serif;
             font-weight: bold;
+            font-size: 60%; /* 전체 폰트 크기 축소 */
         }
 
-       /* 반응형 스타일링 추가 */
+        /* 반응형 스타일링 추가 */
         fieldset {
             border: 5px solid #33ff33;
             padding: 10px;
@@ -30,6 +31,7 @@
             border-radius: 10px;
             box-sizing: border-box;
         }
+
         h1 {
             text-align: center;
             font-size: 1.0em;
@@ -50,69 +52,13 @@
             margin-top: 10px;
             border-radius: 10px;
             overflow: hidden;
-            background-color: #333333; /* 테이블 배경색 */
         }
 
         th, td {
             padding: 5px;
             text-align: center;
             border: 1px solid #33ff33;
-            color: #99ff99; 
-        }
-
-
-    /* 반응형 레이아웃 */
-    @media (max-width: 600px) {
-        h1 {
-            font-size: 1.3em;
-        }
-    }
-
-	table:nth-of-type(2) {
-    width: 100%; /* 가로폭을 100%로 설정 */
-    table-layout: auto; /* 자동 너비 조정 */
-}
-
-table:nth-of-type(2) th:first-child, 
-table:nth-of-type(2) td:first-child {
-    width: 40%;
-}
-
-table:nth-of-type(2) th:nth-child(2), 
-table:nth-of-type(2) td:nth-child(2) {
-    width: 20%;
-}
-
-table:nth-of-type(2) th:last-child, 
-table:nth-of-type(2) td:last-child {
-    width: 40%;
-}
-
-table:nth-of-type(3) th:first-child, 		/* 3번째 테이블 */
-table:nth-of-type(3) td:first-child {
-    width: 50%;
-}
-
-table:nth-of-type(3) th:nth-child(2), 
-table:nth-of-type(3) td:nth-child(2) {
-    width: 50%;
-}
-
-table tbody td:first-child {
-    font-weight: bold;
-    font-size: 115%;
-}
-
-        th:first-child, td:first-child {
-            width: 210px;
-        }
-
-        th:nth-child(3), td:nth-child(3) {
-            width: 20%;
-        }
-
-        th:nth-child(4), td:nth-child(4) {
-            width: 25%;
+            color: #99ff99;
         }
 
         th {
@@ -120,9 +66,21 @@ table tbody td:first-child {
             color: #333333; /* 헤더 폰트 색 */
         }
 
+        /* 첫 번째 행을 제외한 모든 셀의 배경색 설정 */
+        tbody tr:not(:first-child) td {
+            background-color: #333333;
+        }
+
+        /* 반응형 레이아웃 */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.3em;
+            }
+        }
+
         label {
             font-size: 20px;
-	font-weight: bold;
+            font-weight: bold;
         }
 
         input[type="checkbox"] {
@@ -138,13 +96,6 @@ table tbody td:first-child {
             width: 65%;
             font-weight: bold;
             height: 30px;
-        }
-
-        input[type="number"]#RequiredQuota {
-            width: 22%;
-            margin-right: 22px;
-            font-size: 30px;
-            height: 40px;
         }
 
         select {
@@ -183,7 +134,6 @@ table tbody td:first-child {
     </style>
 </head>
 <body>
-
 <fieldset>
     <h1>High Quota Challenge <br> Sell & Purchase Calculator <br> 할당량 챌린지 상점 계산기</h1>
 
