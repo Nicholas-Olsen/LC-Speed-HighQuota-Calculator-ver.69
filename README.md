@@ -6,21 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>High Quota Sell Calculator by Nichol</title>
     <style>
-
+<style>
+    body {
+        background-color: #333333;
+        color: #99ff99;
+        font-family: Sans-serif;
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+    }
        /* 반응형 스타일링 추가 */
 fieldset {
-    border: 5px solid #33ff33;
-    padding: 5px;
-    max-width: 100%; /* 모바일에서 화면 너비를 꽉 채우도록 설정 */
-    width: 100%;
-    margin: 30px auto;
-    box-sizing: border-box; /* padding과 border를 포함하여 크기 조정 */
-}
-        h1 {
-            text-align: center;
-            font-size: 2em;
-            font-weight: bold;
-        }
+        border: 5px solid #33ff33;
+        padding: 5px;
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto;
+        border-radius: 10px;
+        box-sizing: border-box;
+    }
+      h1 {
+        text-align: center;
+        font-size: 1.5em; /* 폰트 크기를 약간 줄였습니다 */
+        font-weight: bold;
+        margin: 10px 0;
+    }
 
         .result {
             font-size: 1.5em;
@@ -29,21 +39,28 @@ fieldset {
             margin-top: 20px;
         }
 
-      table {
-    width: 100%; /* 테이블도 화면 너비를 꽉 채우도록 설정 */
-    border-collapse: separate;
-    margin-top: 10px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-sizing: border-box;
-}
+     table {
+        width: 100%;
+        border-collapse: separate;
+        margin-top: 10px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
 
-        th, td {
-            padding: 5px;
-            text-align: center;
-            border: 1px solid #33ff33;
-            background-color: #333333;
+    th, td {
+        padding: 5px;
+        text-align: center;
+        border: 1px solid #33ff33;
+        background-color: #333333;
+    }
+
+    /* 반응형 레이아웃 */
+    @media (max-width: 600px) {
+        h1 {
+            font-size: 1.3em;
         }
+    }
 
 	table:nth-of-type(2) {
     width: 100%; /* 가로폭을 100%로 설정 */
