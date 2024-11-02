@@ -1,4 +1,4 @@
-### Made my Nichol 
+### Made my Nichol _ v.67
 <html>
 <html lang="ko">
 <head>
@@ -6,75 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>High Quota Sell Calculator by Nichol</title>
     <style>
-body {
-    background-color: #333333;
-    color: #99ff99;
-    font-family: Sans-serif;
-    font-weight: bold;
-}
+        body {
+            background-color: #333333;
+            color: #99ff99;
+            font-family: Sans-serif;
+            font-weight: bold;
+            transform: scale(0.7); /* 페이지 크기 축소 */
+            transform-origin: top left; /* 축소 기준점 */
+        }
 
-fieldset {
-    border: 5px solid #33ff33;
-    padding: 5px;
-    max-width: 650px;
-    margin: 30px auto;
-    border-radius: 10px;
-}
+        fieldset {
+            border: 5px solid #33ff33;
+            padding: 5px;
+            max-width: 650px;
+            margin: 30px auto;
+            border-radius: 10px;
+        }
+
         h1 {
             text-align: center;
             font-size: 2em;
             font-weight: bold;
         }
+
         .result {
             font-size: 1.5em;
             font-weight: bold;
             text-align: center;
             margin-top: 20px;
         }
-table {
-    width: 100%;
-    border-collapse: separate; /* border-collapse를 separate로 설정 */
-    margin-top: 10px;
-    border-radius: 10px; /* 모서리 둥글게 처리 */
-    overflow: hidden; /* 둥글게 처리된 모서리 내부의 내용 잘림 방지 */
-}
 
-th, td {
-    padding: 5px;
-    text-align: center;
-    border: 1px solid #33ff33; /* 윤곽선 색상 및 두께 */
-    background-color: #333333; /* 배경색 설정 */
-}
+        table {
+            width: 100%;
+            border-collapse: separate;
+            margin-top: 10px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
 
-        th:first-child, td:first-child {
-            width: 210px;
+        th, td {
+            padding: 5px;
+            text-align: center;
+            border: 1px solid #33ff33;
+            background-color: #333333;
         }
-        th:nth-child(3), td:nth-child(3) {
-            width: 20%;
-        }
-        th:nth-child(4), td:nth-child(4) {
-            width: 25%;
-        }
-	/* 모든 테이블에서 첫 번째 행 제외하고 1열에 적용 */
-	table tr, td:first-child {
-	    font-size: 1.1em; /* 원하는 글자 크기로 조정 */
-	    font-weight: bold;
-	}
-th {
-    font-size: 1.3em;
-    background-color: #66ff66; /* 첫 번째 테이블의 헤더 배경색 */
-    color: #333333;
-}
-/* 두 번째 테이블에 대한 스타일 */
-table:nth-of-type(2) th {
-    background-color: #66ff66; /* 첫 번째 행 배경색 설정 */
-    color: #333333;
-}
 
-table:nth-of-type(2) td {
-    background-color: #333333; /* 나머지 셀의 배경색 설정 */
-}
-table:nth-of-type(2) {
+	table:nth-of-type(2) {
     width: 100%; /* 가로폭을 100%로 설정 */
     table-layout: auto; /* 자동 너비 조정 */
 }
@@ -104,58 +81,89 @@ table:nth-of-type(3) td:nth-child(2) {
     width: 50%;
 }
 
+table tbody td:first-child {
+    font-weight: bold;
+    font-size: 115%;
+}
+
+        th:first-child, td:first-child {
+            width: 210px;
+        }
+
+        th:nth-child(3), td:nth-child(3) {
+            width: 20%;
+        }
+
+        th:nth-child(4), td:nth-child(4) {
+            width: 25%;
+        }
+
+        th {
+            font-size: 1.4em;
+	font-weight: bold;
+            background-color: #66ff66;
+            color: #333333;
+        }
+
         label {
             font-size: 20px;
+	font-weight: bold;
         }
+
         input[type="checkbox"] {
             transform: scale(1.5);
             margin: 10px;
         }
+
         input[type="number"] {
             font-family: sans-serif;
-            font-size: 20px; 
+            font-size: 20px;
             background-color: #faffff;
             color: #333333;
             width: 65%;
             font-weight: bold;
             height: 30px;
         }
+
         input[type="number"]#RequiredQuota {
-            width: 22%; 
-            margin-right: 22px; 
-            font-size: 30px; 
+            width: 22%;
+            margin-right: 22px;
+            font-size: 30px;
             height: 40px;
         }
+
         select {
             font-family: sans-serif;
-            font-size: 16px;
-            padding: 5px; 
-            border: 1px solid #33ff33; 
+            font-size: 18px;
+            padding: 5px;
+            border: 1px solid #33ff33;
             background-color: #333333;
-            color: #ffffff; 
-            width: 35%; 
-            height: 40px; 
-            font-weight: bold; 
-            box-sizing: border-box; 
+            color: #ffffff;
+            width: 35%;
+            height: 40px;
+            font-weight: bold;
+            box-sizing: border-box;
         }
+
         button {
             background-color: #66ff66;
-            color: ##1C1C1C;
+            color: #1C1C1C; 
             font-size: 1.8em;
             font-weight: bold;
             padding: 20px 50px;
             border: none;
             cursor: pointer;
             display: inline-block;
-            margin: 25px 10px 30px 30px; 
-	border-radius: 15px; /* 둥근 모서리 적용 */
+            margin: 25px 10px 30px 30px;
+            border-radius: 15px;
         }
+
         #result {
-            font-size: 2.5em; 
-            font-weight: bold; 
-            color: #ccffcc; 
-            display: inline-block; 
-            margin-left: 20px; 
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #ccffcc;
+            display: inline-block;
+            margin-left: 20px;
         }
     </style>
 </head>
@@ -300,28 +308,25 @@ table:nth-of-type(3) td:nth-child(2) {
     <div id="result"></div> <!-- 결과 표시 공간 -->
 </fieldset>
 
-
 <script>
 function calculate() {
     const requiredQuota = parseInt(document.getElementById('RequiredQuota').value);
     const moonOrbitCost = parseInt(document.getElementById('MoonOrbitCost').value);
 
-    let playerUtilityPurchase = 0; // 플레이어 유틸리티 구매 초기화
-    let shipUtilityPurchase = 0; // 선박 유틸리티 구매 초기화
-    let totalCost = 0; // 총 비용 초기화
+    let playerUtilityPurchase = 0;
+    let shipUtilityPurchase = 0;
+    let totalCost = 0;
 
-    // 각 항목에 대한 비용 계산
     for (let i = 1; i <= 10; i++) {
-        const checkbox = document.querySelector(input[name="item${i}"]);
-        const quantity = parseInt(document.getElementById(number${i}).value) || 0;
-        const salePrice = parseInt(document.getElementById(salePrice${i}).value) || 0;
+        const checkbox = document.querySelector(`input[name="item${i}"]`);
+        const quantity = parseInt(document.getElementById(`number${i}`).value) || 0;
+        const salePrice = parseInt(document.getElementById(`salePrice${i}`).value) || 0;
 
-        if (checkbox && checkbox.checked) { // checkbox가 정의된 경우에만 체크
-            playerUtilityPurchase += salePrice * quantity; // 플레이어 유틸리티 구매 합산
+        if (checkbox && checkbox.checked) {
+            playerUtilityPurchase += salePrice * quantity;
         }
     }
 
-   // 크루저 구매 금액 설정
     let CruiserPurchase = 0;
     const cruiserCheckbox = document.querySelector('input[name="ship1"]');
     const cruiserDiscount = parseInt(document.querySelector('input[name="ship1"]').parentNode.nextElementSibling.querySelector('input[type="number"]').value) || 370;
@@ -330,29 +335,26 @@ function calculate() {
         CruiserPurchase = cruiserDiscount;
     }
 
-    // 선박 유틸리티 구매 계산
     for (let j = 2; j <= 3; j++) {
-        const shipCheckbox = document.querySelector(input[name="ship${j}"]);
-        if (shipCheckbox && shipCheckbox.checked) { // checkbox가 정의된 경우에만 체크
-            shipUtilityPurchase += parseInt(shipCheckbox.value); // 선박 유틸리티 구매 합산
+        const shipCheckbox = document.querySelector(`input[name="ship${j}"]`);
+        if (shipCheckbox && shipCheckbox.checked) {
+            shipUtilityPurchase += parseInt(shipCheckbox.value);
         }
     }
 
-     // NeedtoSell 계산
     let NeedtoSell;
     if (isNaN(requiredQuota) || isNaN(moonOrbitCost)) {
-        NeedtoSell = "Error"; // 오류가 발생할 경우 "Error" 출력
+        NeedtoSell = "Error";
     } else {
         NeedtoSell = Math.round((moonOrbitCost + playerUtilityPurchase + CruiserPurchase + shipUtilityPurchase) * 5 + 75 + requiredQuota) / 6;
-        NeedtoSell = Math.max(NeedtoSell, 130); // 결과값을 130 이상으로 보장
-        NeedtoSell = Math.round(NeedtoSell); // 결과값을 소수점 첫째 자리에서 반올림
-        NeedtoSell += " $"; // 결과에 "$" 추가
+        NeedtoSell = Math.max(NeedtoSell, 130);
+        NeedtoSell = Math.round(NeedtoSell);
+        NeedtoSell += " $";
     }
 
-    // 결과 출력
     const resultDiv = document.getElementById('result');
-    resultDiv.innerText = NeedtoSell; // 결과 값 출력
-    resultDiv.style.display = 'inline'; // 결과를 표시
+    resultDiv.innerText = NeedtoSell;
+    resultDiv.style.display = 'inline';
 }
 </script>
 </body>
