@@ -7,39 +7,7 @@
     <title>High Quota Sell Calculator by Nichol</title>
     <style>
 
-@media (max-width: 768px) {
-    body {
-        transform: scale(1); /* 모바일에서 기본 크기로 설정 */
-    }
-    fieldset {
-        width: 90%; /* 모바일 화면에 맞춰 가로 너비 조정 */
-    }
-    h1 {
-        font-size: 1.5em; /* 헤드라인 크기 줄이기 */
-    }
-    input[type="number"], select {
-        width: 100%; /* 입력 상자와 셀렉트 박스의 너비를 100%로 설정 */
-        height: 30px; /* 높이 조정 */
-    }
-    button {
-        font-size: 1.5em;
-        padding: 15px 30px; /* 버튼 크기 줄이기 */
-    }
-    table {
-        font-size: 0.9em; /* 테이블 글자 크기 줄이기 */
-    }
-}
-
-        body {
-            background-color: #333333;
-            color: #99ff99;
-            font-family: Sans-serif;
-            font-weight: bold;
-            transform: scale(0.7); /* 페이지 크기 축소 */
-            transform-origin: top left; /* 축소 기준점 */
-        }
-
-        /* 반응형 스타일링 추가 */
+       /* 반응형 스타일링 추가 */
 fieldset {
     border: 5px solid #33ff33;
     padding: 5px;
