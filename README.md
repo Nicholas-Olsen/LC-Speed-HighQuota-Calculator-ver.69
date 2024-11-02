@@ -13,15 +13,14 @@
             box-sizing: border-box;
         }
 
-body {
-    background-color: #333333; /* 배경 색 */
-    color: #99ff99; /* 기본 폰트 색 */
-    font-family: Sans-serif;
-    font-weight: bold;
-    font-size: 60%; /* 전체 폰트 크기 60%로 설정 */
-}
+        body {
+            background-color: #333333; /* 배경 색 */
+            color: #99ff99; /* 기본 폰트 색 */
+            font-family: Sans-serif;
+            font-weight: bold;
+            font-size: 1em; /* 기본 폰트 사이즈 */
+        }
 
-        /* 반응형 스타일링 추가 */
         fieldset {
             border: 5px solid #33ff33;
             padding: 10px;
@@ -32,12 +31,12 @@ body {
             box-sizing: border-box;
         }
 
-h1 {
-    text-align: center;
-    font-size: 1.5em; /* h1의 크기를 부모 요소의 1.5배로 설정 */
-    font-weight: bold;
-    margin: 10px 0;
-}
+        h1 {
+            text-align: center;
+            font-size: 1.0em;
+            font-weight: bold;
+            margin: 10px 0;
+        }
 
         .result {
             font-size: 1.5em;
@@ -47,23 +46,29 @@ h1 {
         }
 
         table {
-            width: 100%;
+            width: 100%; /* 모든 테이블의 가로폭을 100%로 설정 */
             border-collapse: separate;
             margin-top: 10px;
             border-radius: 10px;
             overflow: hidden;
+            background-color: #333333; /* 테이블 배경색 */
         }
 
         th, td {
             padding: 5px;
             text-align: center;
             border: 1px solid #33ff33;
-            color: #99ff99;
+            color: #99ff99; 
         }
 
         th {
             background-color: #66ff66; /* 헤더 배경색 */
             color: #333333; /* 헤더 폰트 색 */
+        }
+
+        label {
+            font-size: 1em;
+            font-weight: bold;
         }
 
 tbody tr {
@@ -73,16 +78,33 @@ tbody tr {
 tbody tr:hover {
     background-color: #444444; /* 선택적으로 마우스를 올렸을 때 색상 변경 */
 }
-        /* 반응형 레이아웃 */
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 1.3em;
-            }
-        }
 
-        label {
-            font-size: 20px;
+        input[type="number"] {
+            font-family: sans-serif;
+            font-size: 0.8em; /* 기본 입력 박스 폰트 사이즈 */
+            background-color: #faffff;
+            color: #333333;
+            width: 40%; /* 텍스트 박스 길이 조정 */
             font-weight: bold;
+            height: 30px;
+        }
+       /* 반응형 스타일링 추가 */
+        @media (max-width: 600px) {
+            body {
+                font-size: 0.6em; /* 모바일에서 폰트 사이즈 60%로 줄이기 */
+            }
+
+            h1 {
+                font-size: 0.8em; /* 모바일에서 제목 크기 조정 */
+            }
+
+            input[type="number"] {
+                width: 60%; /* 모바일에서 입력 박스 너비 조정 */
+            }
+
+            label {
+                font-size: 0.8em; /* 모바일에서 라벨 폰트 사이즈 조정 */
+            }
         }
 
         input[type="checkbox"] {
@@ -90,19 +112,9 @@ tbody tr:hover {
             margin: 10px;
         }
 
-        input[type="number"] {
-            font-family: sans-serif;
-            font-size: 20px;
-            background-color: #faffff;
-            color: #333333;
-            width: 65%;
-            font-weight: bold;
-            height: 30px;
-        }
-
         select {
             font-family: sans-serif;
-            font-size: 18px;
+            font-size: 0.8em; /* 기본 선택 박스 폰트 사이즈 */
             padding: 5px;
             border: 1px solid #33ff33;
             background-color: #333333;
