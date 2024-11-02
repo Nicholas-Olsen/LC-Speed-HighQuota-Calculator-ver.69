@@ -67,7 +67,7 @@ h1 {
         }
 
         /* 첫 번째 행을 제외한 모든 셀의 배경색 설정 */
-        tbody tr:not(:first-child) td {
+        tbody td {
             background-color: #333333;
         }
 
