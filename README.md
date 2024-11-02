@@ -54,7 +54,7 @@
             background-color: #333333; /* 테이블 배경색 */
         }
 
-        tbody tr {
+tbody tr {
     background-color: #333333; /* tbody의 모든 행 배경색 */
 }
 
@@ -152,11 +152,11 @@ tbody tr:hover {
 <fieldset>
     <h1>High Quota Challenge <br> Sell & Purchase Calculator <br> 할당량 챌린지 상점 계산기</h1>
 
-    <div style="display: flex; align-items: center; margin-bottom: 10px;">
-        <label for="RequiredQuota">&nbsp;할당량 :&nbsp;</label>
-        <input type="number" id="RequiredQuota" step="10" value="130" min="130" required>
-        <label for="MoonOrbitCost">다음 목적지 :&nbsp;</label>
-        <select id="MoonOrbitCost" required>
+ <div style="display: flex; align-items: center; margin-bottom: 10px;">
+    <label for="RequiredQuota">&nbsp;할당량 :&nbsp;</label>
+    <input type="number" id="RequiredQuota" step="10" value="130" min="130" required style="width: 30%; margin-right: 10px;"> <!-- 텍스트 박스 길이 조정 및 오른쪽 여백 추가 -->
+    <label for="MoonOrbitCost">다음 목적지 :&nbsp;</label>
+    <select id="MoonOrbitCost" required>
             <option value="0">*무료 위성</option>
             <option value="150">엠브리온</option>
             <option value="550">렌드</option>
