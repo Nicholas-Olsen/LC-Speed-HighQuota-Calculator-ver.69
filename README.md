@@ -32,7 +32,7 @@
         }
         h1 {
             text-align: center;
-            font-size: 1.2em;
+            font-size: 1.0em;
             font-weight: bold;
             margin: 10px 0;
         }
@@ -57,7 +57,7 @@
             padding: 5px;
             text-align: center;
             border: 1px solid #33ff33;
-            color: #99ff99; /* 셀 폰트 색 */
+            color: #99ff99; 
         }
 
 
