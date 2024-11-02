@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>High Quota Sell Calculator by Nichol</title>
-<style>
+  <style>
     /* 기본 스타일 */
     * {
         margin: 0;
@@ -14,7 +14,7 @@
     }
 
     body {
-        background-color: #333333; /* 페이지 배경 색 */
+        background-color: #333333; /* 배경 색 */
         color: #99ff99; /* 기본 폰트 색 */
         font-family: Sans-serif;
         font-weight: bold;
@@ -25,7 +25,7 @@
         border: 5px solid #33ff33;
         padding: 10px;
         max-width: 80%; /* 너비를 80%로 줄임 */
-        width: 80%;
+        width: 80%; /* 너비를 80%로 줄임 */
         margin: 0 auto;
         border-radius: 10px;
         box-sizing: border-box;
@@ -34,34 +34,33 @@
     h1 {
         text-align: center;
         font-size: 0.8em; /* 제목 크기 줄이기 */
+        font-weight: bold;
         margin: 10px 0;
     }
 
     .result {
         font-size: 0.6em; /* 결과 폰트 사이즈를 60%로 줄임 */
+        font-weight: bold;
         text-align: center;
         margin-top: 20px;
     }
 
     table {
         width: 100%; /* 모든 테이블의 가로폭을 100%로 설정 */
-        border-collapse: collapse; /* 경계선 합치기 */
+        border-collapse: separate;
         margin-top: 10px;
+        border-radius: 10px;
+        overflow: hidden;
         background-color: #333333; /* 테이블 배경색 */
-    }
-
-    tbody {
-        background-color: #333333; /* tbody 배경색 지정 */
     }
 
     tbody tr {
         background-color: #333333; /* tbody의 모든 행 배경색 */
     }
-
+    
     tbody tr:hover {
-        background-color: #444444; /* 마우스를 올렸을 때 색상 변경 */
+        background-color: #444444; /* 선택적으로 마우스를 올렸을 때 색상 변경 */
     }
-
     th, td {
         padding: 5px;
         text-align: center;
@@ -79,17 +78,14 @@
         font-weight: bold;
     }
 
-    input[type="number"], select {
+    input[type="number"] {
         font-family: sans-serif;
-        font-size: 0.8em; /* 기본 폰트 사이즈 */
+        font-size: 0.8em; /* 기본 입력 박스 폰트 사이즈 */
         background-color: #faffff;
         color: #333333;
-        padding: 5px;
-        border: 1px solid #33ff33;
-        box-sizing: border-box;
-        width: 40%; /* 기본 너비 */
-        height: 30px; /* 입력 박스 높이 */
+        width: 40%; /* 텍스트 박스 길이 조정 */
         font-weight: bold;
+        height: 30px;
     }
 
     button {
@@ -100,14 +96,16 @@
         padding: 20px 50px;
         border: none;
         cursor: pointer;
-        border-radius: 15px;
+        display: inline-block;
         margin: 25px 10px 30px 30px;
+        border-radius: 15px;
     }
 
     #result {
         font-size: 0.6em; /* 결과 폰트 사이즈를 60%로 줄임 */
         font-weight: bold;
         color: #ccffcc;
+        display: inline-block;
         margin-left: 20px;
     }
 
@@ -121,7 +119,7 @@
             font-size: 0.6em; /* 모바일에서 제목 크기 조정 */
         }
 
-        input[type="number"], select {
+        input[type="number"] {
             width: 60%; /* 모바일에서 입력 박스 너비 조정 */
         }
 
@@ -133,6 +131,19 @@
     input[type="checkbox"] {
         transform: scale(1.5);
         margin: 10px;
+    }
+
+    select {
+        font-family: sans-serif;
+        font-size: 0.8em; /* 기본 선택 박스 폰트 사이즈 */
+        padding: 5px;
+        border: 1px solid #33ff33;
+        background-color: #333333;
+        color: #ffffff;
+        width: 35%;
+        height: 40px;
+        font-weight: bold;
+        box-sizing: border-box;
     }
 </style>
 </head>
