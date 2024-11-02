@@ -6,24 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>High Quota Sell Calculator by Nichol</title>
     <style>
-<style>
+        /* 기본 스타일 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #333333; /* 배경 색 */
+            color: #99ff99; /* 기본 폰트 색 */
+            font-family: Sans-serif;
+            font-weight: bold;
+        }
 
        /* 반응형 스타일링 추가 */
-fieldset {
-        border: 5px solid #33ff33;
-        padding: 5px;
-        max-width: 100%;
-        width: 100%;
-        margin: 0 auto;
-        border-radius: 10px;
-        box-sizing: border-box;
-    }
-      h1 {
-        text-align: center;
-        font-size: 1.5em; /* 폰트 크기를 약간 줄였습니다 */
-        font-weight: bold;
-        margin: 10px 0;
-    }
+        fieldset {
+            border: 5px solid #33ff33;
+            padding: 10px;
+            max-width: 100%;
+            width: 100%;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+        h1 {
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin: 10px 0;
+        }
 
         .result {
             font-size: 1.5em;
@@ -32,21 +44,22 @@ fieldset {
             margin-top: 20px;
         }
 
-     table {
-        width: 100%;
-        border-collapse: separate;
-        margin-top: 10px;
-        border-radius: 10px;
-        overflow: hidden;
-        box-sizing: border-box;
-    }
+        table {
+            width: 100%;
+            border-collapse: separate;
+            margin-top: 10px;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: #333333; /* 테이블 배경색 */
+        }
 
-    th, td {
-        padding: 5px;
-        text-align: center;
-        border: 1px solid #33ff33;
-        background-color: #333333;
-    }
+        th, td {
+            padding: 5px;
+            text-align: center;
+            border: 1px solid #33ff33;
+            color: #99ff99; /* 셀 폰트 색 */
+        }
+
 
     /* 반응형 레이아웃 */
     @media (max-width: 600px) {
@@ -103,10 +116,8 @@ table tbody td:first-child {
         }
 
         th {
-            font-size: 1.4em;
-	font-weight: bold;
-            background-color: #66ff66;
-            color: #333333;
+            background-color: #66ff66; /* 헤더 배경색 */
+            color: #333333; /* 헤더 폰트 색 */
         }
 
         label {
