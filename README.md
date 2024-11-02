@@ -156,7 +156,7 @@ tbody tr:hover {
     <label for="RequiredQuota">&nbsp;할당량 :&nbsp;</label>
     <input type="number" id="RequiredQuota" step="10" value="130" min="130" required style="width: 22%; margin-right: 20px;"> <!-- 텍스트 박스 길이 조정 및 오른쪽 여백 추가 -->
     <label for="MoonOrbitCost">다음 목적지 :&nbsp;</label>
-    <select id="MoonOrbitCost" required style="width: 20%;>
+    <select id="MoonOrbitCost" required style="width: 20%;">
             <option value="0">*무료 위성</option>
             <option value="150">엠브리온</option>
             <option value="550">렌드</option>
