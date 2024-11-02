@@ -7,7 +7,7 @@
     <title>High Quota Sell Calculator by Nichol</title>
     <style>
         /* 기본 스타일 */
-        * {
+        {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -54,6 +54,15 @@
             background-color: #333333; /* 테이블 배경색 */
         }
 
+        tbody tr {
+    background-color: #333333; /* tbody의 모든 행 배경색 */
+}
+
+tbody tr:hover {
+    background-color: #444444; /* 선택적으로 마우스를 올렸을 때 색상 변경 */
+}
+
+
         th, td {
             padding: 5px;
             text-align: center;
@@ -70,14 +79,6 @@
             font-size: 1em;
             font-weight: bold;
         }
-
-tbody tr {
-    background-color: #333333; /* tbody의 모든 행 배경색 */
-}
-
-tbody tr:hover {
-    background-color: #444444; /* 선택적으로 마우스를 올렸을 때 색상 변경 */
-}
 
         input[type="number"] {
             font-family: sans-serif;
