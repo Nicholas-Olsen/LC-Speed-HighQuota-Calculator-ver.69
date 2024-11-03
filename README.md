@@ -48,9 +48,8 @@ fieldset {
 table {
     width: 100%;
     border-collapse: separate;
-    border-spacing: 0; /* 셀 간격을 제거 */
     margin-top: 10px;
-    border-radius: 10px; /* 테이블 전체의 외곽 모서리를 둥글게 */
+    border-radius: 10px !important; /* 테이블 전체의 외곽 모서리를 둥글게 */
     overflow: hidden;
     background-color: #333333 !important;
 }
