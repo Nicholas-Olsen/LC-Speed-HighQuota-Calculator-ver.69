@@ -14,7 +14,7 @@
         }
 
         body {
-            background-color: #333333; /* 배경 색 */
+            background-color: #333333 !important; /* 배경 색 */
             color: #99ff99; /* 기본 폰트 색 */
             font-family: Sans-serif;
             font-weight: bold;
@@ -51,11 +51,11 @@
             margin-top: 10px;
             border-radius: 10px;
             overflow: hidden;
-            background-color: #333333; /* 테이블 배경색 */
+            background-color: #333333 !important; /* 테이블 배경색 */
         }
 
         tbody tr {
-            background-color: #333333; /* tbody의 모든 행 배경색 */
+            background-color: #333333 !important; /* tbody의 모든 행 배경색 */
         }
 
         tbody tr:hover {
