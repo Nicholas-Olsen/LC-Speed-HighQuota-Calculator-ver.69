@@ -21,15 +21,14 @@
             font-size: 1em; /* 기본 폰트 사이즈 */
         }
 
-        fieldset {
-            border: 5px solid #33ff33;
-            padding: 10px;
-            max-width: 80%;
-            width: 100%; /* 너비를 모바일에서 화면 가득 채우도록 설정 */
-            margin: 0 auto;
-            border-radius: 10px;
-            box-sizing: border-box;
-        }
+fieldset {
+    border: 5px solid #33ff33;
+    padding: 10px;
+    width: 100%; /* 너비를 100%로 변경하여 화면 꽉 채우기 */
+    margin: 0;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
 
         h1 {
             text-align: center;
@@ -45,14 +44,16 @@
             margin-top: 20px;
         }
 
-        table {
-            width: 100%; /* 모든 테이블의 가로폭을 100%로 설정 */
-            border-collapse: separate;
-            margin-top: 10px;
-            border-radius: 10px;
-            overflow: hidden;
-            background-color: #333333 !important; /* 테이블 배경색 */
-        }
+      /* 테이블 관련 CSS */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0; /* 셀 간격을 제거 */
+    margin-top: 10px;
+    border-radius: 10px; /* 테이블 전체의 외곽 모서리를 둥글게 */
+    overflow: hidden;
+    background-color: #333333 !important;
+}
 
         tbody tr {
             background-color: #333333 !important; /* tbody의 모든 행 배경색 */
@@ -65,7 +66,7 @@
         th, td {
             padding: 5px;
             text-align: center;
-            border: 1px solid #33ff33;
+            border: 1px solid #33ff33 !important;
             color: #99ff99; 
             font-size: 0.7em; /* th, td 폰트 크기 70%로 줄이기 */
         }
