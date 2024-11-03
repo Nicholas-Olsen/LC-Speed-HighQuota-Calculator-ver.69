@@ -5,148 +5,149 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>High Quota Sell Calculator by Nichol</title>
-  <style>
-    /* 기본 스타일 */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+    <style>
+        /* 기본 스타일 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    body {
-        background-color: #333333; /* 배경 색 */
-        color: #99ff99; /* 기본 폰트 색 */
-        font-family: Sans-serif;
-        font-weight: bold;
-        font-size: 1em; /* 기본 폰트 사이즈 */
-    }
-
-    fieldset {
-        border: 5px solid #33ff33;
-        padding: 10px;
-        max-width: 80%; /* 너비를 80%로 줄임 */
-        width: 80%; /* 너비를 80%로 줄임 */
-        margin: 0 auto;
-        border-radius: 10px;
-        box-sizing: border-box;
-    }
-
-    h1 {
-        text-align: center;
-        font-size: 0.8em; /* 제목 크기 줄이기 */
-        font-weight: bold;
-        margin: 10px 0;
-    }
-
-    .result {
-        font-size: 0.6em; /* 결과 폰트 사이즈를 60%로 줄임 */
-        font-weight: bold;
-        text-align: center;
-        margin-top: 20px;
-    }
-
-    table {
-        width: 100%; /* 모든 테이블의 가로폭을 100%로 설정 */
-        border-collapse: separate;
-        margin-top: 10px;
-        border-radius: 10px;
-        overflow: hidden;
-        background-color: #333333; /* 테이블 배경색 */
-    }
-
-    tbody tr {
-        background-color: #333333; /* tbody의 모든 행 배경색 */
-    }
-    
-    tbody tr:hover {
-        background-color: #444444; /* 선택적으로 마우스를 올렸을 때 색상 변경 */
-    }
-    th, td {
-        padding: 5px;
-        text-align: center;
-        border: 1px solid #33ff33;
-        color: #99ff99; 
-    }
-
-    th {
-        background-color: #66ff66; /* 헤더 배경색 */
-        color: #333333; /* 헤더 폰트 색 */
-    }
-
-    label {
-        font-size: 1em;
-        font-weight: bold;
-    }
-
-    input[type="number"] {
-        font-family: sans-serif;
-        font-size: 0.8em; /* 기본 입력 박스 폰트 사이즈 */
-        background-color: #faffff;
-        color: #333333;
-        width: 40%; /* 텍스트 박스 길이 조정 */
-        font-weight: bold;
-        height: 30px;
-    }
-
-    button {
-        background-color: #66ff66;
-        color: #1C1C1C; 
-        font-size: 0.6em; /* 버튼 폰트 사이즈를 60%로 줄임 */
-        font-weight: bold;
-        padding: 20px 50px;
-        border: none;
-        cursor: pointer;
-        display: inline-block;
-        margin: 25px 10px 30px 30px;
-        border-radius: 15px;
-    }
-
-    #result {
-        font-size: 0.6em; /* 결과 폰트 사이즈를 60%로 줄임 */
-        font-weight: bold;
-        color: #ccffcc;
-        display: inline-block;
-        margin-left: 20px;
-    }
-
-    /* 반응형 스타일링 추가 */
-    @media (max-width: 600px) {
         body {
-            font-size: 0.6em; /* 모바일에서 폰트 사이즈 60%로 줄이기 */
+            background-color: #333333; /* 배경 색 */
+            color: #99ff99; /* 기본 폰트 색 */
+            font-family: Sans-serif;
+            font-weight: bold;
+            font-size: 1em; /* 기본 폰트 사이즈 */
+        }
+
+        fieldset {
+            border: 5px solid #33ff33;
+            padding: 10px;
+            max-width: 80%;
+            width: 100%; /* 너비를 모바일에서 화면 가득 채우도록 설정 */
+            margin: 0 auto;
+            border-radius: 10px;
+            box-sizing: border-box;
         }
 
         h1 {
-            font-size: 0.6em; /* 모바일에서 제목 크기 조정 */
+            text-align: center;
+            font-size: 0.7em; /* 제목 크기 70%로 줄이기 */
+            font-weight: bold;
+            margin: 10px 0;
         }
 
-        input[type="number"] {
-            width: 60%; /* 모바일에서 입력 박스 너비 조정 */
+        .result {
+            font-size: 0.6em; /* 결과 폰트 사이즈를 60%로 줄임 */
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%; /* 모든 테이블의 가로폭을 100%로 설정 */
+            border-collapse: separate;
+            margin-top: 10px;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: #333333; /* 테이블 배경색 */
+        }
+
+        tbody tr {
+            background-color: #333333; /* tbody의 모든 행 배경색 */
+        }
+
+        tbody tr:hover {
+            background-color: #444444; /* 선택적으로 마우스를 올렸을 때 색상 변경 */
+        }
+
+        th, td {
+            padding: 5px;
+            text-align: center;
+            border: 1px solid #33ff33;
+            color: #99ff99; 
+            font-size: 0.7em; /* th, td 폰트 크기 70%로 줄이기 */
+        }
+
+        th {
+            background-color: #66ff66; /* 헤더 배경색 */
+            color: #333333; /* 헤더 폰트 색 */
         }
 
         label {
-            font-size: 0.8em; /* 모바일에서 라벨 폰트 사이즈 조정 */
+            font-size: 1em;
+            font-weight: bold;
         }
-    }
 
-    input[type="checkbox"] {
-        transform: scale(1.5);
-        margin: 10px;
-    }
+        input[type="number"] {
+            font-family: sans-serif;
+            font-size: 0.8em;
+            background-color: #faffff;
+            color: #333333;
+            width: 40%; /* 텍스트 박스 길이 조정 */
+            font-weight: bold;
+            height: 30px;
+        }
 
-    select {
-        font-family: sans-serif;
-        font-size: 0.8em; /* 기본 선택 박스 폰트 사이즈 */
-        padding: 5px;
-        border: 1px solid #33ff33;
-        background-color: #333333;
-        color: #ffffff;
-        width: 35%;
-        height: 40px;
-        font-weight: bold;
-        box-sizing: border-box;
-    }
-</style>
+        button {
+            background-color: #66ff66;
+            color: #1C1C1C;
+            font-size: 0.96em; /* 기존 크기의 160% */
+            font-weight: bold;
+            padding: 20px 50px;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+            margin: 25px 10px 30px 30px;
+            border-radius: 15px;
+        }
 
+        #result {
+            font-size: 0.6em;
+            font-weight: bold;
+            color: #ccffcc;
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        /* 반응형 스타일링 추가 */
+        @media (max-width: 600px) {
+            body {
+                font-size: 0.6em; /* 모바일에서 폰트 사이즈 60%로 줄이기 */
+            }
+
+            h1 {
+                font-size: 0.6em;
+            }
+
+            input[type="number"] {
+                width: 60%;
+            }
+
+            label {
+                font-size: 0.8em;
+            }
+        }
+
+        input[type="checkbox"] {
+            transform: scale(1.5);
+            margin: 10px;
+        }
+
+        select {
+            font-family: sans-serif;
+            font-size: 0.8em;
+            padding: 5px;
+            border: 1px solid #33ff33;
+            background-color: #333333;
+            color: #ffffff;
+            width: 35%;
+            height: 40px;
+            font-weight: bold;
+            box-sizing: border-box;
+        }
+    </style>
 </head>
 <body>
 <fieldset>
@@ -284,10 +285,9 @@
         </tbody>
     </table>
 
-    <button onclick="calculate()">계산</button>
-    <div id="result"></div> <!-- 결과 표시 공간 -->
+ <button onclick="calculate()">계산</button>
+    <div id="result"></div>
 </fieldset>
-
 <script>
 function calculate() {
     const requiredQuota = parseInt(document.getElementById('RequiredQuota').value);
