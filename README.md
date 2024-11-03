@@ -32,7 +32,7 @@ fieldset {
 
         h1 {
             text-align: center;
-            font-size: 0.7em; /* 제목 크기 70%로 줄이기 */
+            font-size: 0.4em; /* 제목 크기 70%로 줄이기 */
             font-weight: bold;
             margin: 10px 0;
         }
