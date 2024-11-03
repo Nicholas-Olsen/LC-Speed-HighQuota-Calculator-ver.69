@@ -80,15 +80,37 @@ table {
             font-weight: bold;
         }
 
+    /* 기본 PC 스타일 */
         input[type="number"] {
             font-family: sans-serif;
-            font-size: 0.8em;
+            font-size: 1.2em;
             background-color: #faffff;
             color: #333333;
             width: 40%; /* 텍스트 박스 길이 조정 */
             font-weight: bold;
             height: 30px;
         }
+    
+    table th, table td {
+        font-size: 0.8em; /* 테이블 폰트 크기 (PC) */
+    }
+
+    /* 모바일용 반응형 스타일 */
+    @media (max-width: 600px) {
+        input[type="number"] {
+            font-family: sans-serif;
+            font-size: 1.0em;
+            background-color: #faffff;
+            color: #333333;
+            width: 40%; /* 텍스트 박스 길이 조정 */
+            font-weight: bold;
+            height: 30px;
+        }
+
+        table th, table td {
+            font-size: 0.5em; /* 테이블 폰트 크기 (모바일) */
+        }
+    }
 
         button {
             background-color: #66ff66;
