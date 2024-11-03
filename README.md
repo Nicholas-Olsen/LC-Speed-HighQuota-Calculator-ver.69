@@ -71,8 +71,8 @@
         }
 
         th {
-            background-color: #66ff66; /* 헤더 배경색 */
-            color: #333333; /* 헤더 폰트 색 */
+            background-color: #66ff66 !important; /* 헤더 배경색 */
+            color: #333333 !important; /* 헤더 폰트 색 */
         }
 
         label {
