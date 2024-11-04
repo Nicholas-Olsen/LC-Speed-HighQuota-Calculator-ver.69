@@ -108,7 +108,7 @@ table {
         }
 
         table th, table td {
-            font-size: 0.5em; /* 테이블 폰트 크기 (모바일) */
+            font-size: 0.7em; /* 테이블 폰트 크기 (모바일) */
         }
     }
 
@@ -136,7 +136,7 @@ table {
         /* 반응형 스타일링 추가 */
         @media (max-width: 600px) {
             body {
-                font-size: 0.6em; /* 모바일에서 폰트 사이즈 60%로 줄이기 */
+                font-size: 0.7em; /* 모바일에서 폰트 사이즈 60%로 줄이기 */
             }
 
             h1 {
