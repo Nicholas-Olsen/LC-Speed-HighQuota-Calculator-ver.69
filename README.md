@@ -53,12 +53,13 @@ table {
     margin-top: 10px;
     border-radius: 10px;
     overflow: hidden; /* 둥글게 처리된 모서리 내부의 내용 잘림 방지 */
+    border: 5px solid #33ff33 !important;  /* 테이블 테두리 색상 */
 }
 
 th, td {
     padding: 5px;
     text-align: center;
-    border: 1px solid #33ff33 !important;  /* 테두리 색상을 강제로 적용 */
+    border: 2px solid #33ff33 !important;  /* 테두리 색상을 강제로 적용 */
     background-color: #333333;  /* 배경색 설정 */
 }
 
