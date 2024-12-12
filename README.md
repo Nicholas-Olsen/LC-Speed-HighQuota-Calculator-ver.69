@@ -30,7 +30,8 @@ fieldset {
     max-width: 650px;
     margin: 30px auto;
     border-radius: 10px;
-    background-color: #333333; /* 배경색 추가 */
+    background-color: #333333;  /* 배경색 */
+    box-sizing: border-box;  /* 내부 여백 및 테두리 포함하여 크기 계산 */
 }
         h1 {
             text-align: center;
@@ -47,6 +48,7 @@ fieldset {
 
 table {
     width: 100%;
+    border-collapse: collapse;  /* 셀의 경계를 합침 */
     border-spacing: 0; /* 테이블 셀 간격을 0으로 설정 */
     margin-top: 10px;
     border-radius: 10px;
@@ -56,8 +58,8 @@ table {
 th, td {
     padding: 5px;
     text-align: center;
-    border: 1px solid #33ff33; /* 윤곽선 색상 및 두께 */
-    background-color: #333333; /* 배경색 설정 */
+    border: 1px solid #33ff33 !important;  /* 테두리 색상을 강제로 적용 */
+    background-color: #333333;  /* 배경색 설정 */
 }
 
         th:first-child, td:first-child {
