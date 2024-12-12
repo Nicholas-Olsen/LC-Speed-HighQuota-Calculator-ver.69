@@ -17,8 +17,8 @@
     width: 20%;
 }
 
-    @media screen and (max-width: 768px) {
-   body {
+@media (max-width: 768px) {
+  body {
         font-size: 60%; /* 모바일 폰트 크기 */
         background-color: #333333;
         color: #99ff99;
