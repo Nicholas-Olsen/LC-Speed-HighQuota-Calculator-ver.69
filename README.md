@@ -49,7 +49,7 @@ fieldset {
 table {
     width: 100%;
     border-collapse: collapse;  /* 셀의 경계를 합침 */
-    border-spacing: 0; /* 테이블 셀 간격을 0으로 설정 */
+    border-spacing: 1; /* 테이블 셀 간격을 0으로 설정 */
     margin-top: 10px;
     border-radius: 10px;
     overflow: hidden; /* 둥글게 처리된 모서리 내부의 내용 잘림 방지 */
