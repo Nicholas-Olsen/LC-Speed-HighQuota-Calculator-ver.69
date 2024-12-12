@@ -1,4 +1,4 @@
-### Speed High Quota Sell Calculator 
+### Speed High Quota Sell Helper 
 ### Made my Nichol ### ver.68
 <html>
 <html lang="ko">
@@ -17,7 +17,9 @@
     width: 20%;
 }
 
-        body {
+    @media screen and (max-width: 768px) {
+    body {
+            font-size: 60%; /* 전체 폰트 크기 축소 */
             background-color: #333333;
             color: #99ff99;
             font-family: Sans-serif;
@@ -33,6 +35,7 @@
         }
         
         h1 {
+            font-size: 1.5em; /* 제목 폰트 크기 축소 */
             text-align: center;
             font-size: 2em;
             font-weight: bold;
@@ -55,6 +58,7 @@
         }
 
         th, td {
+            font-size: 0.9em; 
             padding: 5px;
             text-align: center;
             border: 1px solid #33ff33 !important; /* 중요도를 높임 */
@@ -108,7 +112,7 @@
         }
 
         label {
-            font-size: 20px;
+            font-size: 16px;
         }
 
         input[type="checkbox"] {
@@ -118,7 +122,7 @@
 
         input[type="number"] {
             font-family: sans-serif;
-            font-size: 20px;
+            font-size: 16px;
             background-color: #faffff;
             color: #333333;
             width: 65%;
@@ -149,9 +153,9 @@
         button {
             background-color: #66ff66;
             color: #1C1C1C;
-            font-size: 1.8em;
+            font-size: 1.5em;
             font-weight: bold;
-            padding: 20px 50px;
+            padding: 15px 30px;
             border: none;
             cursor: pointer;
             display: inline-block;
@@ -160,7 +164,7 @@
         }
 
         #result {
-            font-size: 2.5em; 
+            font-size: 2em; 
             font-weight: bold; 
             color: #ccffcc; 
             display: inline-block; 
