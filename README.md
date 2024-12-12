@@ -30,6 +30,7 @@ fieldset {
     max-width: 650px;
     margin: 30px auto;
     border-radius: 10px;
+    background-color: #333333; /* 배경색 추가 */
 }
         h1 {
             text-align: center;
@@ -46,9 +47,9 @@ fieldset {
 
 table {
     width: 100%;
-    border-collapse: collapse; /* border-collapse를 separate로 설정 */
+    border-spacing: 0; /* 테이블 셀 간격을 0으로 설정 */
     margin-top: 10px;
-    border-radius: 10px; /* 모서리 둥글게 처리 */
+    border-radius: 10px;
     overflow: hidden; /* 둥글게 처리된 모서리 내부의 내용 잘림 방지 */
 }
 
