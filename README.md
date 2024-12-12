@@ -1,4 +1,5 @@
-### Speed High Quota Sell Calculator ### Made my Nichol ### ver.68
+### Speed High Quota Sell Calculator 
+### Made my Nichol ### ver.68
 <html>
 <html lang="ko">
 <head>
