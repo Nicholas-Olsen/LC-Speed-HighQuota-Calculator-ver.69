@@ -46,7 +46,7 @@ fieldset {
 
 table {
     width: 100%;
-    border-collapse: separate; /* border-collapse를 separate로 설정 */
+    border-collapse: collapse; /* border-collapse를 separate로 설정 */
     margin-top: 10px;
     border-radius: 10px; /* 모서리 둥글게 처리 */
     overflow: hidden; /* 둥글게 처리된 모서리 내부의 내용 잘림 방지 */
