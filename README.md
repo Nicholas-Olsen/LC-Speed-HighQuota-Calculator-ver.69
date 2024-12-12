@@ -18,13 +18,14 @@
 }
 
     @media screen and (max-width: 768px) {
-    body {
-            font-size: 60%; /* 전체 폰트 크기 축소 */
-            background-color: #333333;
-            color: #99ff99;
-            font-family: Sans-serif;
-            font-weight: bold;
-        }
+   body {
+        font-size: 60%; /* 모바일 폰트 크기 */
+        background-color: #333333;
+        color: #99ff99;
+        font-family: Sans-serif;
+        font-weight: bold;
+    }
+
         
         fieldset {
             border: 5px solid #33ff33;
@@ -37,7 +38,6 @@
         h1 {
             font-size: 1.5em; /* 제목 폰트 크기 축소 */
             text-align: center;
-            font-size: 2em;
             font-weight: bold;
         }
         
@@ -63,11 +63,13 @@
             text-align: center;
             border: 1px solid #33ff33 !important; /* 중요도를 높임 */
             background-color: #333333;
+            color: #99ff99;
         }
 
         th:first-child, td:first-child {
             width: 210px;
         }
+
 
         th:nth-child(3), td:nth-child(3) {
             width: 20%;
@@ -112,7 +114,7 @@
         }
 
         label {
-            font-size: 16px;
+           font-size: 0.8em;
         }
 
         input[type="checkbox"] {
@@ -120,9 +122,9 @@
             margin: 10px;
         }
 
-        input[type="number"] {
+        input[type="number"]t {
             font-family: sans-serif;
-            font-size: 16px;
+            font-size: 0.9em;
             background-color: #faffff;
             color: #333333;
             width: 65%;
@@ -153,7 +155,7 @@
         button {
             background-color: #66ff66;
             color: #1C1C1C;
-            font-size: 1.5em;
+            font-size: 1.2em;
             font-weight: bold;
             padding: 15px 30px;
             border: none;
