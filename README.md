@@ -324,7 +324,49 @@
 
 
 <script>
+
+    function validateNumber(input) {
+    const value = parseInt(input.value, 10);
+    if (isNaN(value) || value < 0) {
+        input.value = "";
+        displayError("# 개수 혹은 할인가에 값을 바르게 입력하세요");
+    }
+}
+    function validateDiscount(input) {
+    const value = parseFloat(input.value);
+    if (isNaN(value) || value <= 0) {
+        input.value = "";
+        displayError("# 개수 혹은 할인가에 값을 바르게 입력하세요");
+    }
+}
+    function displayError(message) {
+    const resultDiv = document.getElementById("result");
+    resultDiv.textContent = message;
+    resultDiv.style.color = "#ff6666";
+}
 function calculate() {
+    const numberInputs = document.querySelectorAll("input[type='number']");
+    let isValid = true;
+
+    numberInputs.forEach(input => {
+        if (input.value === "" || parseInt(input.value, 10) < 0) {
+            isValid = false;
+        }
+    });
+
+    if (!isValid) {
+        displayError("# 개수 혹은 할인가에 값을 바르게 입력하세요");
+        return;
+    }
+
+    const resultDiv = document.getElementById("result");
+    resultDiv.textContent = "계산 완료!";
+    resultDiv.style.color = "#ccffcc";
+}
+
+    
+
+    function calculate() {
     const requiredQuota = parseInt(document.getElementById('RequiredQuota').value);
     const moonOrbitCost = parseInt(document.getElementById('MoonOrbitCost').value);
     const daysLeft = parseInt(document.getElementById('DaysLeft').value);
