@@ -72,11 +72,11 @@
 
 
         th:nth-child(3), td:nth-child(3) {
-            width: 20%;
+            width: 15%;
         }
 
         th:nth-child(4), td:nth-child(4) {
-            width: 25%;
+            width: 20%;
         }
 
         /* 모든 테이블에서 첫 번째 행 제외하고 1열에 적용 */
@@ -94,8 +94,8 @@
         /* 두 번째 테이블에 대한 스타일 */
         table:nth-of-type(2) th,
         table:nth-of-type(2) td {
-            background-color: #66ff66;
-            color: #333333;
+            background-color: #333333;
+            color: #99ff99;
         }
 
         /* 세 번째 테이블 너비 조정 */
@@ -127,7 +127,7 @@
             font-size: 0.9em;
             background-color: #faffff;
             color: #333333;
-            width: 30%;
+            width: 20%;
             font-weight: bold;
             height: 30px;
         }
@@ -146,7 +146,7 @@
             border: 1px solid #33ff33; 
             background-color: #333333;
             color: #ffffff; 
-            width: 35%; 
+            width: 30%; 
             height: 40px; 
             font-weight: bold; 
             box-sizing: border-box; 
