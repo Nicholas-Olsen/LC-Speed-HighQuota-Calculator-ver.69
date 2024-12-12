@@ -122,12 +122,12 @@
             margin: 10px;
         }
 
-        input[type="number"]t {
+        input[type="number"] {
             font-family: sans-serif;
             font-size: 0.9em;
             background-color: #faffff;
             color: #333333;
-            width: 65%;
+            width: 30%;
             font-weight: bold;
             height: 30px;
         }
