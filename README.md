@@ -17,128 +17,128 @@
     width: 20%;
 }
 
-@media (max-width: 768px) {
-  body {
-        font-size: 60%; /* 모바일 폰트 크기 */
-        background-color: #333333;
-        color: #99ff99;
-        font-family: Sans-serif;
-        font-weight: bold;
-    }
+body {
+    background-color: #333333;
+    color: #99ff99;
+    font-family: Sans-serif;
+    font-weight: bold;
+}
 
-        
-        fieldset {
-            border: 5px solid #33ff33;
-            padding: 5px;
-            max-width: 650px;
-            margin: 30px auto;
-            border-radius: 10px;
-        }
-        
+fieldset {
+    border: 5px solid #33ff33;
+    padding: 5px;
+    max-width: 650px;
+    margin: 30px auto;
+    border-radius: 10px;
+}
         h1 {
-            font-size: 1.5em; /* 제목 폰트 크기 축소 */
             text-align: center;
+            font-size: 2em;
             font-weight: bold;
         }
-        
         .result {
             font-size: 1.5em;
             font-weight: bold;
             text-align: center;
             margin-top: 20px;
         }
-        
-        table {
-            width: 100%;
-            border-collapse: separate;
-            margin-top: 10px;
-            border-radius: 10px;
-            overflow: hidden;
-            table-layout: fixed; /* 변경된 부분: 테이블 레이아웃 고정 */
-        }
 
-        th, td {
-            font-size: 0.9em; 
-            padding: 5px;
-            text-align: center;
-            border: 1px solid #33ff33 !important; /* 중요도를 높임 */
-            background-color: #333333;
-            color: #99ff99;
-        }
+
+table {
+    width: 100%;
+    border-collapse: separate; /* border-collapse를 separate로 설정 */
+    margin-top: 10px;
+    border-radius: 10px; /* 모서리 둥글게 처리 */
+    overflow: hidden; /* 둥글게 처리된 모서리 내부의 내용 잘림 방지 */
+}
+
+th, td {
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #33ff33; /* 윤곽선 색상 및 두께 */
+    background-color: #333333; /* 배경색 설정 */
+}
 
         th:first-child, td:first-child {
             width: 210px;
         }
-
-
         th:nth-child(3), td:nth-child(3) {
-            width: 15%;
-        }
-
-        th:nth-child(4), td:nth-child(4) {
             width: 20%;
         }
-
-        /* 모든 테이블에서 첫 번째 행 제외하고 1열에 적용 */
-        table tr, td:first-child {
-            font-size: 1.1em;
-            font-weight: bold;
+        th:nth-child(4), td:nth-child(4) {
+            width: 25%;
         }
+	/* 모든 테이블에서 첫 번째 행 제외하고 1열에 적용 */
+	table tr, td:first-child {
+	    font-size: 1.1em; /* 원하는 글자 크기로 조정 */
+	    font-weight: bold;
+	}
+th {
+    font-size: 1.3em;
+    background-color: #66ff66; /* 첫 번째 테이블의 헤더 배경색 */
+    color: #333333;
+}
+/* 두 번째 테이블에 대한 스타일 */
+table:nth-of-type(2) th {
+    background-color: #66ff66; /* 첫 번째 행 배경색 설정 */
+    color: #333333;
+}
 
-        th {
-            font-size: 1.3em;
-            background-color: #66ff66;
-            color: #333333;
-        }
+table:nth-of-type(2) td {
+    background-color: #333333; /* 나머지 셀의 배경색 설정 */
+}
+table:nth-of-type(2) {
+    width: 100%; /* 가로폭을 100%로 설정 */
+    table-layout: auto; /* 자동 너비 조정 */
+}
 
-        /* 두 번째 테이블에 대한 스타일 */
-        table:nth-of-type(2) th,
-        table:nth-of-type(2) td {
-            background-color: #333333;
-            color: #99ff99;
-        }
+table:nth-of-type(2) th:first-child, 
+table:nth-of-type(2) td:first-child {
+    width: 40%;
+}
 
-        /* 세 번째 테이블 너비 조정 */
-        table:nth-of-type(3) {
-            width: 100%; /* 가로폭을 100%로 설정 */
-        }
+table:nth-of-type(2) th:nth-child(2), 
+table:nth-of-type(2) td:nth-child(2) {
+    width: 20%;
+}
 
-        table:nth-of-type(3) th:first-child,
-        table:nth-of-type(3) td:first-child {
-            width: 50%; /* 첫 번째 열 50% */
-        }
+table:nth-of-type(2) th:last-child, 
+table:nth-of-type(2) td:last-child {
+    width: 40%;
+}
 
-        table:nth-of-type(3) th:nth-child(2),
-        table:nth-of-type(3) td:nth-child(2) {
-            width: 50%; /* 두 번째 열 50% */
-        }
+table:nth-of-type(3) th:first-child, 		/* 3번째 테이블 */
+table:nth-of-type(3) td:first-child {
+    width: 50%;
+}
+
+table:nth-of-type(3) th:nth-child(2), 
+table:nth-of-type(3) td:nth-child(2) {
+    width: 50%;
+}
 
         label {
-           font-size: 0.8em;
+            font-size: 17px;
         }
-
         input[type="checkbox"] {
             transform: scale(1.5);
             margin: 10px;
         }
-
         input[type="number"] {
             font-family: sans-serif;
-            font-size: 0.9em;
+            font-size: 20px; 
             background-color: #faffff;
             color: #333333;
-            width: 20%;
+            width: 65%;
             font-weight: bold;
             height: 30px;
         }
-
         input[type="number"]#RequiredQuota {
-            width: 22%; 
-            margin-right: 22px; 
-            font-size: 30px; 
+            width: 16%; 
+            margin-right: 10px; 
+            font-size: 24px; 
             height: 40px;
         }
-
         select {
             font-family: sans-serif;
             font-size: 16px;
@@ -146,32 +146,38 @@
             border: 1px solid #33ff33; 
             background-color: #333333;
             color: #ffffff; 
-            width: 30%; 
+            width: 35%; 
             height: 40px; 
             font-weight: bold; 
             box-sizing: border-box; 
         }
-
         button {
             background-color: #66ff66;
-            color: #1C1C1C;
-            font-size: 1.2em;
+            color: ##1C1C1C;
+            font-size: 1.8em;
             font-weight: bold;
-            padding: 15px 30px;
+            padding: 20px 50px;
             border: none;
             cursor: pointer;
             display: inline-block;
             margin: 25px 10px 30px 30px; 
-            border-radius: 15px; 
+	border-radius: 15px; /* 둥근 모서리 적용 */
         }
-
-        #result {
-            font-size: 2em; 
+#result {
+    font-size: 2.5em !important; /* 강제 적용 */
             font-weight: bold; 
             color: #ccffcc; 
             display: inline-block; 
             margin-left: 20px; 
         }
+
+#result.small-font {
+    font-size: 1.6em !important; /* 강제 적용 */
+    font-weight: bold;
+    color: #ccffcc;
+}
+
+
     </style>
 </head>
 <body>
@@ -324,49 +330,7 @@
 
 
 <script>
-
-    function validateNumber(input) {
-    const value = parseInt(input.value, 10);
-    if (isNaN(value) || value < 0) {
-        input.value = "";
-        displayError("# 개수 혹은 할인가에 값을 바르게 입력하세요");
-    }
-}
-    function validateDiscount(input) {
-    const value = parseFloat(input.value);
-    if (isNaN(value) || value <= 0) {
-        input.value = "";
-        displayError("# 개수 혹은 할인가에 값을 바르게 입력하세요");
-    }
-}
-    function displayError(message) {
-    const resultDiv = document.getElementById("result");
-    resultDiv.textContent = message;
-    resultDiv.style.color = "#ff6666";
-}
 function calculate() {
-    const numberInputs = document.querySelectorAll("input[type='number']");
-    let isValid = true;
-
-    numberInputs.forEach(input => {
-        if (input.value === "" || parseInt(input.value, 10) < 0) {
-            isValid = false;
-        }
-    });
-
-    if (!isValid) {
-        displayError("# 개수 혹은 할인가에 값을 바르게 입력하세요");
-        return;
-    }
-
-    const resultDiv = document.getElementById("result");
-    resultDiv.textContent = "계산 완료!";
-    resultDiv.style.color = "#ccffcc";
-}
-
-    
-
-    function calculate() {
     const requiredQuota = parseInt(document.getElementById('RequiredQuota').value);
     const moonOrbitCost = parseInt(document.getElementById('MoonOrbitCost').value);
     const daysLeft = parseInt(document.getElementById('DaysLeft').value);
@@ -456,4 +420,5 @@ if (totalPurchaseCost < requiredQuota) {
 </script>
 </body>
 </html>
+
 
