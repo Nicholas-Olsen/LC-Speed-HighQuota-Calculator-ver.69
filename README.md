@@ -424,5 +424,3 @@ if (totalPurchaseCost < requiredQuota) {
 </script>
 </body>
 </html>
-
-
