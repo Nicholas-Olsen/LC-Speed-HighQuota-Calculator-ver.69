@@ -349,35 +349,32 @@ table:nth-of-type(3) td:nth-child(2) {
     document.getElementById("v69").checked = true;
 
     // 버전 변경 시 이벤트 처리
-   document.querySelector('#versionSelector').addEventListener('change', function() {
+document.querySelector('#versionSelector').addEventListener('change', function() {
+    // 버전 선택이 v56일 경우
     if (this.value === 'v56') {
-        // v56 선택 시 변경 사항
+        // v56에 맞게 행을 숨기고 값을 수정합니다.
         document.getElementById("beltBackpackRow").style.display = 'none'; // 벨트 배낭 행 숨기기
-
         const herbicideRow = document.getElementById("herbicideRow");
         const checkbox = herbicideRow.querySelector('input[type="checkbox"]');
         const salePriceInput = herbicideRow.querySelector('#salePrice3');
+        
+        // v56에 맞는 값으로 설정
         checkbox.value = "40";
         salePriceInput.value = "40";
         salePriceInput.max = "40";
         salePriceInput.step = "4";
-
-        // 제초제 값을 수정하는 부분
-        salePriceInput.dispatchEvent(new Event('change')); // 값 변경 후 change 이벤트를 발생시켜서 업데이트 반영
-    } else {
-        // v69 선택 시 원래 상태로 복원
+    } else { // v69일 경우
+        // v69에 맞게 원래대로 복원
         document.getElementById("beltBackpackRow").style.display = ''; // 벨트 배낭 행 보이기
-
         const herbicideRow = document.getElementById("herbicideRow");
         const checkbox = herbicideRow.querySelector('input[type="checkbox"]');
         const salePriceInput = herbicideRow.querySelector('#salePrice3');
+        
+        // v69에 맞는 값으로 복원
         checkbox.value = "25";
         salePriceInput.value = "25";
         salePriceInput.max = "25";
         salePriceInput.step = "2.5";
-
-        // 제초제 값을 복원하는 부분
-        salePriceInput.dispatchEvent(new Event('change')); // 값 변경 후 change 이벤트를 발생시켜서 업데이트 반영
     }
 });
 	
