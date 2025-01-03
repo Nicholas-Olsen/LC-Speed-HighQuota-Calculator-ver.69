@@ -371,7 +371,6 @@ table:nth-of-type(3) td:nth-child(2) {
                 salePriceInput.max = "25";
                 salePriceInput.step = "2.5";
             }
-        });
     });
 	
 function calculate() {
