@@ -242,7 +242,7 @@ table:nth-of-type(3) td:nth-child(2) {
                 <td><input type="number" min="0" id="number2"></td>
                 <td><input type="number" step="2" id="salePrice2" value="20" max="20"></td>
             </tr>
-               <tr id="herbicideRow">
+            <tr id="herbicideRow">
                 <td>제초제</td>
                 <td><input type="checkbox" name="item3" value="25"></td>
                 <td><input type="number" min="0" id="number3"></td>
