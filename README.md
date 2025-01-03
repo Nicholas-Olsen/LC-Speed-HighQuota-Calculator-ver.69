@@ -349,8 +349,7 @@ table:nth-of-type(3) td:nth-child(2) {
     document.getElementById("v69").checked = true;
 
     // 버전 변경 시 이벤트 처리
-    document.querySelectorAll('input[name="version"]').forEach(radio => {
-        radio.addEventListener('change', function() {
+   document.querySelector('#versionSelector').addEventListener('change', function() {
             if (this.value === 'v56') {
                 // v56 선택 시 변경 사항
                 document.getElementById("beltBackpackRow").style.display = 'none'; // 벨트 배낭 행 숨기기
