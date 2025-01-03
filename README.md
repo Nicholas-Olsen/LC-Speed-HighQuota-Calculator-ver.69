@@ -189,7 +189,7 @@ table:nth-of-type(3) td:nth-child(2) {
 <fieldset>
     <h1>High Quota Challenge <br> Sell & Purchase Calculator <br> 할당량 챌린지 상점 계산기</h1>
 
-        <!-- 버전 선택 체크박스 추가 -->
+        <!-- 버전 선택 박스 추가 -->
 <div style="margin-bottom: 10px;">
     <label for="versionSelector">버전 선택: </label>
     <select id="versionSelector" style="font-family: sans-serif; font-size: 16px; padding: 5px; border: 1px solid #33ff33; background-color: #333333; color: #ffffff; width: auto; height: 40px; font-weight: bold; box-sizing: border-box;">
