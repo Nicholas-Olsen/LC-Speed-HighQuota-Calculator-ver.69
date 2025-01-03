@@ -190,13 +190,13 @@ table:nth-of-type(3) td:nth-child(2) {
     <h1>High Quota Challenge <br> Sell & Purchase Calculator <br> 할당량 챌린지 상점 계산기</h1>
 
         <!-- 버전 선택 박스 추가 -->
-<div style="margin-bottom: 10px;">
-    <label for="versionSelector">버전 선택: </label>
-    <select id="versionSelector" style="font-family: sans-serif; font-size: 16px; padding: 5px; border: 1px solid #33ff33; background-color: #333333; color: #ffffff; width: auto; height: 40px; font-weight: bold; box-sizing: border-box;">
-        <option value="v56">v56</option>
-        <option value="v69" selected>v69 (최신)</option>
-    </select>
-</div>
+ <div style="margin-bottom: 10px;">
+        <label for="versionSelector"> 버전 선택 : </label>
+        <select id="versionSelector" style="font-family: sans-serif; font-size: 16px; padding: 5px; border: 1px solid #33ff33; background-color: #333333; color: #ffffff; width: auto; height: 40px; font-weight: bold; box-sizing: border-box;">
+            <option value="v56">v56</option>
+            <option value="v69" selected>v69 (최신)</option>
+        </select>
+    </div>
 
 
 <div style="display: flex; align-items: center; margin-bottom: 10px;">
@@ -345,38 +345,30 @@ table:nth-of-type(3) td:nth-child(2) {
 
 <script>
 
-    // 초기 상태 설정
-    document.getElementById("v69").checked = true;
-
     // 버전 변경 시 이벤트 처리
-document.querySelector('#versionSelector').addEventListener('change', function() {
-    // 버전 선택이 v56일 경우
-    if (this.value === 'v56') {
-        // v56에 맞게 행을 숨기고 값을 수정합니다.
-        document.getElementById("beltBackpackRow").style.display = 'none'; // 벨트 배낭 행 숨기기
+    document.querySelector('#versionSelector').addEventListener('change', function() {
+        const version = this.value;
+        const beltBackpackRow = document.getElementById("beltBackpackRow");
         const herbicideRow = document.getElementById("herbicideRow");
         const checkbox = herbicideRow.querySelector('input[type="checkbox"]');
         const salePriceInput = herbicideRow.querySelector('#salePrice3');
-        
-        // v56에 맞는 값으로 설정
-        checkbox.value = "40";
-        salePriceInput.value = "40";
-        salePriceInput.max = "40";
-        salePriceInput.step = "4";
-    } else { // v69일 경우
-        // v69에 맞게 원래대로 복원
-        document.getElementById("beltBackpackRow").style.display = ''; // 벨트 배낭 행 보이기
-        const herbicideRow = document.getElementById("herbicideRow");
-        const checkbox = herbicideRow.querySelector('input[type="checkbox"]');
-        const salePriceInput = herbicideRow.querySelector('#salePrice3');
-        
-        // v69에 맞는 값으로 복원
-        checkbox.value = "25";
-        salePriceInput.value = "25";
-        salePriceInput.max = "25";
-        salePriceInput.step = "2.5";
-    }
-});
+
+        if (version === 'v56') {
+            // v56에 맞게 행을 숨기고 값을 수정
+            beltBackpackRow.style.display = 'none';
+            checkbox.value = "40";
+            salePriceInput.value = "40";
+            salePriceInput.max = "40";
+            salePriceInput.step = "4";
+        } else { // v69일 경우
+            beltBackpackRow.style.display = ''; // 벨트 배낭 행 보이기
+            checkbox.value = "25";
+            salePriceInput.value = "25";
+            salePriceInput.max = "25";
+            salePriceInput.step = "2.5";
+        }
+    });
+
 	
 function calculate() {
     const requiredQuota = parseInt(document.getElementById('RequiredQuota').value);
