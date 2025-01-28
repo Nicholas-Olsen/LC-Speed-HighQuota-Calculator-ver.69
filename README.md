@@ -381,12 +381,14 @@ function calculate() {
     let totalCost = 0; // 총 비용 초기화
 
     // 각 항목에 대한 비용 계산
-   for (let i = 1; i <= 11; i++) {
+    for (let i = 1; i <= 11; i++) { // 11번까지 계산
         const checkbox = document.querySelector(`input[name="item${i}"]`);
         const quantity = parseInt(document.getElementById(`number${i}`).value) || 0;
         const salePrice = parseInt(document.getElementById(`salePrice${i}`).value) || 0;
+
+        // 체크박스가 선택된 경우에만 계산
         if (checkbox && checkbox.checked) {
-            playerUtilityPurchase += salePrice * quantity;
+            playerUtilityPurchase += quantity * salePrice; // 가격 계산
         }
     }
 
@@ -399,13 +401,16 @@ function calculate() {
         CruiserPurchase = cruiserDiscount;
     }
 
-    // 선박 유틸리티 구매 계산
-    for (let j = 2; j <= 3; j++) {
-        const shipCheckbox = document.querySelector(`input[name="ship${j}"]`);
-        if (shipCheckbox && shipCheckbox.checked) { // checkbox가 정의된 경우에만 체크
-            shipUtilityPurchase += parseInt(shipCheckbox.value); // 선박 유틸리티 구매 합산
+   // 선박 장비 비용 추가 계산
+    for (let j = 1; j <= 3; j++) {
+        const checkbox = document.querySelector(`input[name="ship${j}"]`);
+        const salePrice = parseInt(checkbox.value) || 0;
+
+        if (checkbox && checkbox.checked) {
+            shipUtilityPurchase += salePrice; // 선박 장비 가격 합산
         }
     }
+
 
     // 필요할 경우 할당량보다 낮은지 확인
     const totalPurchaseCost = moonOrbitCost + playerUtilityPurchase + CruiserPurchase + shipUtilityPurchase;
