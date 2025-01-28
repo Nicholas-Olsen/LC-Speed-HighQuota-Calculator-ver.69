@@ -381,7 +381,7 @@ function calculate() {
     let totalCost = 0; // 총 비용 초기화
 
     // 각 항목에 대한 비용 계산
-   for (let i = 1; i <= 10; i++) {
+   for (let i = 1; i <= 11; i++) {
         const checkbox = document.querySelector(`input[name="item${i}"]`);
         const quantity = parseInt(document.getElementById(`number${i}`).value) || 0;
         const salePrice = parseInt(document.getElementById(`salePrice${i}`).value) || 0;
