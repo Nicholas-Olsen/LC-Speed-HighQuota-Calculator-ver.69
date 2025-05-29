@@ -1,5 +1,5 @@
 ### Speed High Quota Sell Helper 
-### Made my Nichol ### ver.69
+### Made by Nichol ### ver.69
 <html>
 <html lang="ko">
 <head>
