@@ -402,7 +402,7 @@ function calculate() {
     }
 
    // 선박 장비 비용 추가 계산
-    for (let j = 1; j <= 3; j++) {
+    for (let j = 2; j <= 3; j++) {
         const checkbox = document.querySelector(`input[name="ship${j}"]`);
         const salePrice = parseInt(checkbox.value) || 0;
 
