@@ -1,5 +1,5 @@
 ### Speed High Quota Sell Helper 
-### Made by Nichol ### ver.69
+### Made by Nichol ### ver.73
 <html>
 <html lang="ko">
 <head>
@@ -194,7 +194,7 @@ table:nth-of-type(3) td:nth-child(2) {
         <label for="versionSelector"> 버전 선택 : </label>
         <select id="versionSelector" style="font-family: sans-serif; font-size: 16px; padding: 5px; border: 1px solid #33ff33; background-color: #333333; color: #ffffff; width: auto; height: 40px; font-weight: bold; box-sizing: border-box;">
             <option value="v56">v56</option>
-            <option value="v69" selected>v69 (최신)</option>
+            <option value="v69" selected>v73 (최신)</option>
         </select>
     </div>
 
